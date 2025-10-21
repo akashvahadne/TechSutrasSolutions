@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSutras Solutions | Innovating Connections, Empowering Safety</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+
+    <meta name="description" content="TechSutras Solutions — Innovating digital safety and connectivity through smart apps like SurakshitRide and GameOn.">
+    <meta name="keywords" content="TechSutras, SurakshitRide, GameOn, tech startup, transport safety, turf booking, AI solutions, internships">
+    <meta name="author" content="TechSutras Solutions">
+    <meta property="og:image" content="img/logo.webp">
+    <meta property="og:title" content="TechSutras Solutions">
+    <meta property="og:description" content="Innovating Connections, Empowering Safety.">
+    <meta property="og:type" content="website">
+    
+    <style>
+        :root {
+            --navy-blue: #0a2540;
+            --cyan: #00bcd4;
+            --amber: #ffb300;
+            --white: #ffffff;
+            --light-grey: #f5f7fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        nav a:hover {
+          border-bottom: 2px solid var(--cyan);
+          transition: all 0.2s ease-in-out;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(-45deg, #0a2540, #00bcd4, #0a2540, #00bcd4);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            height: 40px;
+            width: 40px;
+        }
+        
+        .brand-name {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            background: linear-gradient(45deg, #0a2540, #00bcd4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-[#f5f7fa]">
+    <!-- Navigation - Reduced height -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="logo-container">
+                <!-- Logo image with proper sizing -->
+                <img src="img/LOGO.webp" alt="TechSutras Solutions logo" class="logo-img" style="width: 80px; height: 80px;">
+                <span class="ml-3 brand-name" style="margin-left: -11px;">TechSutras Solutions</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-[#0a2540] hover:text-[#00bcd4] font-medium transition-colors">Home</a>
+                <a href="#about" class="text-[#0a2540] hover:text-[#00bcd4] font-medium transition-colors">About</a>
+                <a href="#services" class="text-[#0a2540] hover:text-[#00bcd4] font-medium transition-colors">Services</a>
+                <a href="#why-us" class="text-[#0a2540] hover:text-[#00bcd4] font-medium transition-colors">Why Us</a>
+                <a href="#contact" class="text-[#0a2540] hover:text-[#00bcd4] font-medium transition-colors">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-[#0a2540] focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-3 px-6 shadow-lg">
+            <a href="#home" class="block py-2 text-[#0a2540] hover:text-[#00bcd4]">Home</a>
+            <a href="#about" class="block py-2 text-[#0a2540] hover:text-[#00bcd4]">About</a>
+            <a href="#services" class="block py-2 text-[#0a2540] hover:text-[#00bcd4]">Services</a>
+            <a href="#why-us" class="block py-2 text-[#0a2540] hover:text-[#00bcd4]">Why Us</a>
+            <a href="#contact" class="block py-2 text-[#0a2540] hover:text-[#00bcd4]">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Adjusted padding to account for smaller navbar -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-6 py-20 flex flex-col items-center text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                Innovating Connections, <span class="text-[#ffb300]">Empowering Safety.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-white mb-10 max-w-3xl">
+                TechSutras Solutions delivers cutting-edge digital products that transform how people connect, play, and stay safe.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#services" class="bg-[#ffb300] hover:bg-amber-500 text-[#0a2540] font-bold py-3 px-8 rounded-lg transition-colors">
+                    Our Products
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#0a2540] font-bold py-3 px-8 rounded-lg transition-colors">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0a2540] mb-4">About TechSutras</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-[#0a2540] to-[#00bcd4] mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="bg-gradient-to-br from-[#0a2540] to-[#00bcd4] p-1 rounded-xl">
+                        <div class="bg-white p-8 rounded-xl">
+                            <h3 class="text-2xl font-bold text-[#0a2540] mb-4">Our Mission</h3>
+                            <p class="text-gray-700 mb-6">
+                                At TechSutras Solutions, we believe technology should enhance human experiences and safety. Our mission is to create innovative digital solutions that solve real-world problems through intuitive design and cutting-edge technology.
+                            </p>
+                            <p class="text-gray-700">
+                                Founded by a team of passionate engineers and designers, we're committed to building products that make everyday activities safer, more efficient, and more enjoyable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-[#f5f7fa] p-6 rounded-xl">
+                            <div class="text-[#00bcd4] text-3xl mb-4">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-[#0a2540] mb-2">Safety First</h4>
+                            <p class="text-gray-600">Prioritizing user safety in all our solutions</p>
+                        </div>
+                        <div class="bg-[#f5f7fa] p-6 rounded-xl">
+                            <div class="text-[#00bcd4] text-3xl mb-4">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-[#0a2540] mb-2">Innovation</h4>
+                            <p class="text-gray-600">Constantly pushing boundaries with new ideas</p>
+                        </div>
+                        <div class="bg-[#f5f7fa] p-6 rounded-xl">
+                            <div class="text-[#00bcd4] text-3xl mb-4">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-[#0a2540] mb-2">User-Centric</h4>
+                            <p class="text-gray-600">Designing with the end-user in mind</p>
+                        </div>
+                        <div class="bg-[#f5f7fa] p-6 rounded-xl">
+                            <div class="text-[#00bcd4] text-3xl mb-4">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-[#0a2540] mb-2">Growth</h4>
+                            <p class="text-gray-600">Expanding our impact through technology</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-[#f5f7fa]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0a2540] mb-4">Our Products & Services</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-[#0a2540] to-[#00bcd4] mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-6">
+                    Discover our innovative digital solutions and opportunities for students to grow with us.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                <!-- SurakshitRide Card -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-2 bg-gradient-to-r from-[#0a2540] to-[#00bcd4]"></div>
+                    <div class="p-8">
+                        <div class="text-[#00bcd4] text-4xl mb-6">
+                            <i class="fas fa-car-side"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-[#0a2540] mb-4">SurakshitRide</h3>
+                        <p class="text-gray-600 mb-6">
+                            A smart transport safety app that provides real-time monitoring, emergency alerts, and route optimization for safer journeys. SurakshitRide ensures peace of mind for both passengers and their loved ones.
+                        </p>
+                        <ul class="text-gray-600 mb-8 space-y-2">
+                            <li><i class="fas fa-check text-[#00bcd4] mr-2"></i> Real-time location sharing</li>
+                            <li><i class="fas fa-check text-[#00bcd4] mr-2"></i> Emergency SOS with one tap</li>
+                            <li><i class="fas fa-check text-[#00bcd4] mr-2"></i> Route optimization for safety</li>
+                            <li><i class="fas fa-check text-[#00bcd4] mr-2"></i> Driver verification system</li>
+                        </ul>
+                        <button class="bg-[#0a2540] hover:bg-[#14385c] text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- GameOn Card -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-2 bg-gradient-to-r from-[#ffb300] to-[#ffca28]"></div>
+                    <div class="p-8">
+                        <div class="text-[#ffb300] text-4xl mb-6">
+                            <i class="fas fa-futbol"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-[#0a2540] mb-4">GameOn</h3>
+                        <p class="text-gray-600 mb-6">
+                            A comprehensive sports turf booking and team management platform that makes organizing games effortless. Find venues, manage teams, schedule matches, and connect with fellow sports enthusiasts.
+                        </p>
+                        <ul class="text-gray-600 mb-8 space-y-2">
+                            <li><i class="fas fa-check text-[#ffb300] mr-2"></i> Easy turf booking system</li>
+                            <li><i class="fas fa-check text-[#ffb300] mr-2"></i> Team management tools</li>
+                            <li><i class="fas fa-check text-[#ffb300] mr-2"></i> Match scheduling & reminders</li>
+                            <li><i class="fas fa-check text-[#ffb300] mr-2"></i> Player statistics tracking</li>
+                        </ul>
+                        <button class="bg-[#ffb300] hover:bg-amber-500 text-[#0a2540] font-bold py-3 px-6 rounded-lg transition-colors">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Internships & Projects Card -->
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="h-2 bg-gradient-to-r from-[#00bcd4] to-[#ffb300]"></div>
+                    <div class="p-8">
+                        <div class="text-[#00bcd4] text-4xl mb-6">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-[#0a2540] mb-4">Internships & Projects</h3>
+                        <p class="text-gray-600 mb-6">
+                            Empowering the next generation of tech talent through hands-on internships and comprehensive final year project guidance for computer science students.
+                        </p>
+                        <div class="mb-8">
+                            <h4 class="text-lg font-bold text-[#0a2540] mb-3">Internship Opportunities:</h4>
+                            <ul class="text-gray-600 space-y-2">
+                                <li><i class="fas fa-laptop-code text-[#00bcd4] mr-2"></i> Web Development</li>
+                                <li><i class="fas fa-mobile-alt text-[#00bcd4] mr-2"></i> Mobile App Development</li>
+                                <li><i class="fas fa-brain text-[#00bcd4] mr-2"></i> AI/ML Projects</li>
+                            </ul>
+                        </div>
+                        <div class="mb-8">
+                            <h4 class="text-lg font-bold text-[#0a2540] mb-3">Final Year Projects:</h4>
+                            <ul class="text-gray-600 space-y-2">
+                                <li><i class="fas fa-code text-[#ffb300] mr-2"></i> Custom Websites & Applications</li>
+                                <li><i class="fas fa-robot text-[#ffb300] mr-2"></i> AI-Powered Solutions</li>
+                            </ul>
+                        </div>
+                        <button class="bg-gradient-to-r from-[#00bcd4] to-[#ffb300] hover:from-[#00acc1] hover:to-amber-500 text-white font-bold py-3 px-6 rounded-lg transition-colors w-full">
+                            Apply Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0a2540] mb-4">Why Choose TechSutras?</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-[#0a2540] to-[#00bcd4] mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6">
+                    <div class="feature-icon bg-gradient-to-br from-[#0a2540] to-[#00bcd4] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#0a2540] mb-4">Innovation</h3>
+                    <p class="text-gray-600">
+                        We stay ahead of the curve with cutting-edge technology and forward-thinking solutions that anticipate future needs.
+                    </p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="feature-icon bg-gradient-to-br from-[#0a2540] to-[#00bcd4] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#0a2540] mb-4">Trust</h3>
+                    <p class="text-gray-600">
+                        Our products are built with security and reliability at their core, earning the trust of thousands of users.
+                    </p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="feature-icon bg-gradient-to-br from-[#0a2540] to-[#00bcd4] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#0a2540] mb-4">Smart Tech</h3>
+                    <p class="text-gray-600">
+                        We leverage AI and machine learning to create intelligent solutions that adapt to user behavior and preferences.
+                    </p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="feature-icon bg-gradient-to-br from-[#0a2540] to-[#00bcd4] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-friends text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#0a2540] mb-4">User-First</h3>
+                    <p class="text-gray-600">
+                        Every feature is designed with the end-user in mind, ensuring intuitive experiences that people love to use.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-[#0a2540] to-[#00bcd4] text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-white mx-auto"></div>
+                <p class="max-w-2xl mx-auto mt-6 opacity-90">
+                    Have questions about our products or want to collaborate? We'd love to hear from you.
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-10 max-w-6xl mx-auto">
+                <div class="md:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/70" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/70" placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/70" placeholder="Tell us about your project or inquiry..."></textarea>
+                        </div>
+                        <button type="submit" class="bg-[#ffb300] hover:bg-amber-500 text-[#0a2540] font-bold py-3 px-8 rounded-lg transition-colors w-full md:w-auto">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl h-full">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-[#ffb300] text-xl mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email Us</h4>
+                                    <p class="opacity-90">contact@techsutras.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-[#ffb300] text-xl mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Our Office</h4>
+                                    <p class="opacity-90">Tech Park, Innovation District<br>Bangalore, India</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-[#ffb300] text-xl mr-4 mt-1">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Business Hours</h4>
+                                    <p class="opacity-90">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10">
+                            <h4 class="font-bold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" aria-label="Twitter" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a2540] text-white py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <!-- Footer logo with proper sizing -->
+                        <img src="img/LOGO.webp" alt="TechSutras Logo" class="h-8 w-auto" style="width: 110px; height: 110px;">
+                        <span class="ml-3 brand-name" style="margin-left: -15px; margin-top: -18px">TechSutras Solutions</span>
+                    </div>
+                    <p class="mt-2 text-gray-400 text-sm">
+                        Innovating Connections, Empowering Safety.
+                    </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>© 2025 TechSutras Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+
+         document.addEventListener("DOMContentLoaded", () => {
+            AOS.init();
+
+            // Smooth scroll fix for better mobile alignment
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+              anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href");
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                  const yOffset = -80;
+                  const y = targetElement.getBoundingClientRect().top + window.scrollY + yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+                }
+              });
+            });
+        
+            // Scroll-to-top button logic (optional)
+            const scrollBtn = document.getElementById("scrollTopBtn");
+            window.addEventListener("scroll", () => {
+              scrollBtn.style.display = window.scrollY > 400 ? "block" : "none";
+            });
+            scrollBtn.addEventListener("click", () => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+          });
+          
+    </script>
+</body>
+</html>
